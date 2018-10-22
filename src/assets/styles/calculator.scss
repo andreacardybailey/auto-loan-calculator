@@ -1,0 +1,209 @@
+@import "base";
+/* 
+===========================================
+Shared component styles: 
+Form, Calculations, Amortization Schedule
+===========================================
+*/
+.Form,
+.Calculations {
+  padding: 1.5rem 1rem;
+}
+.Form,
+.Calculations,
+.Schedule-thead {
+  font-family: "Raleway", sans-serif;
+  color: $dk-grey;
+}
+.Calculations-monthlyPayment,
+.Calculations-amount,
+.Schedule-tbody,
+.Form-input {
+  font-family: "Lato", sans-serif;
+}
+/* 
+===========================================
+Form
+===========================================
+*/
+.Form {
+  background-color: $lt-grey;
+}
+.Form-group {
+  margin: 1rem 0;
+  display: flex;
+  position: relative;
+}
+.Form-label,
+.Form-input {
+  line-height: 1.5rem;
+  align-self: center;
+}
+.Form-label {
+  width: 42%;
+  padding-right: 4px;
+  white-space: nowrap;
+}
+.Form-label:after {
+  position: absolute;
+}
+.Form-label--currency:after {
+  content: "$";
+  padding-left: 0.5rem;
+  left: 42%;
+}
+.Form-label--percent:after {
+  content: "%";
+  left: 52%;
+}
+.Form-input {
+  font-size: 1rem;
+  color: $dk-grey;
+  width: 58%;
+  padding: 0 2%;
+  border: 1px solid $md-grey;
+  border-radius: 4px;
+  -moz-appearance: textfield;
+}
+.Form-input::-webkit-inner-spin-button,
+.Form-input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+.Form-input--currency {
+  padding-left: 1.2rem;
+}
+.Form-input--small {
+  width: 17%;
+  padding-right: 1.4rem;
+}
+/* 
+===========================================
+Calculations 
+===========================================
+*/
+.Calculations {
+  border-bottom: 1px solid $lt-grey;
+}
+.Calculations-monthlyPayment {
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: $green;
+}
+.Calculations-monthlyPayment {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.Calculations-list {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Calculations-term,
+.Calculations-amount {
+  margin-top: 1rem;
+}
+.Calculations-term:first-of-type,
+.Calculations-amount:first-of-type {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $lt-grey;
+}
+.Calculations-term {
+  padding-right: 4px;
+  flex: 42%;
+}
+.Calculations-amount {
+  text-align: right;
+  flex: 58%;
+}
+/* 
+===========================================
+Amortization Schedule 
+===========================================
+*/
+.Schedule {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.Schedule-showHide {
+  margin: 2rem 1rem;
+  display: block;
+}
+.Schedule-table {
+  width: 100%;
+}
+.Schedule-thead {
+  font-weight: 700;
+  background-color: $lt-grey;
+}
+.Schedule-tbody {
+  color: $dk-grey;
+}
+.Schedule-column {
+  text-align: center;
+  padding: 8px;
+}
+.Schedule-column--graph {
+  display: none;
+}
+.Schedule-column--principalColumn {
+  color: $blue;
+}
+.Schedule-column--interestColumn {
+  color: $teal;
+}
+
+@media all and (min-width: 600px) {
+  .Form {
+    flex: 53%;
+  }
+  .Calculations {
+    border-top: 1px solid $lt-grey;
+    flex: 47%;
+  }
+  .Calculations-monthlyPayment {
+    margin-bottom: 1.5rem;
+  }
+  .Calculations-amount {
+    flex: 30%;
+  }
+  .Schedule-column--graph {
+    width: 100%;
+    display: table-cell;
+  }
+  .Schedule-graph {
+    display: flex;
+  }
+  .Schedule-graphBar {
+    height: 0.75rem;
+  }
+  .Schedule-graphBar--principal {
+    background-color: $blue;
+    margin-right: 1px;
+  }
+  .Schedule-graphBar--interest {
+    background-color: $teal;
+  }
+}
+
+@media all and (min-width: 770px) {
+  .Calculations {
+    border-right: 1px solid $lt-grey;
+    border-radius: 0 6px 6px 0;
+  }
+  .Form {
+    border-left: 1px solid $lt-grey;
+    border-radius: 6px 0 0 6px;
+  }
+  .Schedule-tableContainer {
+    border: 1px solid $lt-grey;
+    border-radius: 6px;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .Calculations,
+  .Form {
+    padding: 2.5rem 2rem;
+  }
+}

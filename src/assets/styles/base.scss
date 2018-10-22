@@ -1,0 +1,72 @@
+@import "reset-css";
+
+$blue: #0076a3;
+$lt-grey: #e6e7e8;
+$md-grey: #cfcfcf;
+$dk-grey: #58595b;
+$green: #008e0b;
+$teal: #00aebd;
+$white: #fff;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  min-width: 320px;
+  max-width: 1100px;
+}
+h1 {
+  color: $blue;
+  font-size: 1.9rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 2rem 0;
+}
+h2 {
+  color: $dk-grey;
+  font-size: 1.3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem 0;
+}
+a {
+  color: $blue;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media all and (min-width: 600px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-size: 2.65rem;
+  }
+  h2 {
+    font-size: 1.16rem;
+  }
+}
+
+@media all and (min-width: 770px) {
+  body {
+    width: 80%;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 960px) {
+  html {
+    font-size: 18px;
+  }
+}
