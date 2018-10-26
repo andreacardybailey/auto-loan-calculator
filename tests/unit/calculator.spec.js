@@ -53,8 +53,8 @@ describe("calculator.js", () => {
     });
     it("correctly calculates monthly balance, interest, and principal", () => {
       expect(result).to.eql([
-        { balance: 5001.24, interest: 24.98, principal: 4988.76 },
-        { balance: -0, interest: 12.5, principal: 5001.24 }
+        { balance: 5001, interest: 25, principal: 4989 },
+        { balance: -0, interest: 13, principal: 5001 }
       ]);
     });
   });

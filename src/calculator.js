@@ -68,9 +68,9 @@ export const calculator = {
       let principal = this.calcPrincipal(balance);
       balance = balance - principal;
       amortization.push({
-        principal: Math.round(principal * 100) / 100,
-        interest: Math.round(interest * 100) / 100,
-        balance: Math.round(balance * 100) / 100
+        principal: Math.round(principal),
+        interest: Math.round(interest),
+        balance: Math.round(balance)
       });
       counter++;
     }

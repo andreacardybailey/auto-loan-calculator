@@ -15,15 +15,15 @@
       <tbody class="Schedule-tbody">
         <tr class="Schedule-tr" v-for="(month, index) in amortizationData" :key="index">
           <td class="Schedule-column">{{index + 1}}</td>
-          <td class="Schedule-column Schedule-column--principalColumn">${{Math.round(month.principal)}}</td>
+          <td class="Schedule-column Schedule-column--principalColumn">${{month.principal}}</td>
           <td class="Schedule-column Schedule-column--graph">
             <div class="Schedule-graph">
               <div class="Schedule-graphBar Schedule-graphBar--principal" v-bind:style="{flex: month.principal}"></div>
               <div class="Schedule-graphBar Schedule-graphBar--interest" v-bind:style="{flex: month.interest}"></div>
             </div>
           </td>
-          <td class="Schedule-column Schedule-column--interestColumn">${{Math.round(month.interest)}}</td>
-          <td class="Schedule-column">${{Math.round(month.balance)}}</td>
+          <td class="Schedule-column Schedule-column--interestColumn">${{month.interest}}</td>
+          <td class="Schedule-column">${{month.balance}}</td>
         </tr>
       </tbody>
     </table>

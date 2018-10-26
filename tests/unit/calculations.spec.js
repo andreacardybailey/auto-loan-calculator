@@ -3,7 +3,7 @@ import { shallowMount } from "@vue/test-utils";
 import Calculations from "@/components/Calculations.vue";
 
 describe("Calculations.vue", () => {
-  let wrapper, componentInstance;
+  let wrapper;
   beforeEach(() => {
     wrapper = shallowMount(Calculations, {
       propsData: {
@@ -12,7 +12,6 @@ describe("Calculations.vue", () => {
         totalInterest: 30
       }
     });
-    componentInstance = wrapper.vm;
   });
   it("renders props.monthlyPayment when passed", () => {
     expect(wrapper.text()).to.include(360);
