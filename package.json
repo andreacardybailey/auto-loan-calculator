@@ -7,15 +7,17 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit --require tests/unit/setup.js",
+    "test:e2e": "vue-cli-service test:e2e",
     "start": "node server.js"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "reset-css": "^4.0.1",
-    "vue": "^2.5.17",
-    "express": "^4.16.4"
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-e2e-cypress": "^3.1.1",
     "@vue/cli-plugin-eslint": "^3.0.5",
     "@vue/cli-plugin-unit-mocha": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
