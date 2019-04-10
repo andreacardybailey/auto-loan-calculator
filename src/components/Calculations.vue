@@ -14,6 +14,10 @@
 <script>
 export default {
   name: "Calculations",
-  props: ["monthlyPayment", "totalPrincipal", "totalInterest"]
+  props: {
+    monthlyPayment: Number,
+    totalPrincipal: Number,
+    totalInterest: Number
+  }
 };
 </script>
